@@ -1,0 +1,2 @@
+CREATE DATABASE IF NOT EXISTS `logistics`;
+GRANT ALL ON *.* TO 'root';
