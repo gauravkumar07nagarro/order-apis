@@ -14,7 +14,10 @@ yarn-error.log
 /app/User.php
 /tests/Unit/ExampleTest.php
 /tests/Feature/ExampleTest.php
-/resources
+/resources/js
+/resources/sass
 /app/Http/Middleware/OrderApiAuthentication.php
 /storage/api-docs
-/storage/framework/views
+package.json
+webpack.mix.js
+.styleci.yml
