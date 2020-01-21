@@ -48,6 +48,6 @@ class PatchOrderRequest extends FormRequest
      * @return Exception
      */
     protected function failedValidation(Validator $validator) {
-        throw new HttpResponseException(response()->json(['error' => $validator->errors()->all()], Response::HTTP_UNPROCESSABLE_ENTITY));
+        throw new HttpResponseException(response()->json(['error' => $validator->errors()->first()], Response::HTTP_UNPROCESSABLE_ENTITY));
     }
 }

@@ -4,7 +4,7 @@
         "title": "Order APIs",
         "version": "1.0.0"
     },
-    "basePath": "/api",
+    "basePath": "/",
     "paths": {
         "/orders": {
             "get": {
@@ -35,7 +35,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "[{'id': 10,'total_distance': 170201,'status': 'UNASSIGNED'},{'id': 11,'total_distance': 170211,'status':'UNASSIGNED'}]"
+                        "description": "[{'id': 10,'distance': 170201,'status': 'UNASSIGNED'},{'id': 11,'distance': 170211,'status':'UNASSIGNED'}]"
                     }
                 }
             },
@@ -84,7 +84,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "{'total_distance': 170201,'status': 'UNASSIGNED','id': 8}"
+                        "description": "{'distance': 170201,'status': 'UNASSIGNED','id': 8}"
                     },
                     "422": {
                         "description": "{'error': 'Invalid location, please enter valid location or check google api'}"

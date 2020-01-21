@@ -29,7 +29,7 @@ class OrderRepository
             $totalDistance = $this->calculateDistanceBetweenOriginAndDestination( $orderData['origin_lat'].','. $orderData['origin_long'],
             $orderData['dest_lat']. ','. $orderData['dest_long'] );
 
-            $orderData['total_distance'] = $totalDistance;
+            $orderData['distance'] = $totalDistance;
             $orderData['status'] = Order::UNASSIGNED;
 
             return Order::create($orderData);

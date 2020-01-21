@@ -32,10 +32,13 @@ trait Helper {
 
             $response = $curl->getRequest($url, $params);
 
-            if (!empty($response) && isset($response['rows'][0]['elements'][0]['distance']['value'])) {
+            if (!empty($response) && isset($response['rows'][0]['elements'][0]['distance']['value']) && $response['rows'][0]['elements'][0]['distance']['value'] > 0 ) {
                 $totalDistance = $response['rows'][0]['elements'][0]['distance']['value'];
-            }elseif(!empty($response) && isset($response['rows'][0]['elements'][0]['status'])){
+            } elseif (!empty($response) && !isset($response['rows'][0]['elements'][0]['distance']['value'])){
                 throw new \Exception(trans('order.google_api_distance_exception'));
+            } elseif (!empty($response) && isset($response['rows'][0]['elements'][0]['distance']['value']) && $response['rows'][0]['elements'][0]['distance']['value'] == 0 ){
+
+                throw new \Exception(trans('order.same_origin_and_destination'));
             }
 
             if ( $totalDistance == null ) {
@@ -57,7 +60,7 @@ trait Helper {
 
     public function apiErrorResponse($error, $headerStatusCode = Response::HTTP_UNPROCESSABLE_ENTITY, $headers = [])
     {
-        return response()->json(['error' => $error], $headerStatusCode);
+        return response()->json(['error' => is_array($error) ? $error->first() : $error], $headerStatusCode);
     }
 
 

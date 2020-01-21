@@ -26,7 +26,7 @@ class CreateOrdersTable extends Migration
             $table->string('origin_long', 100);
             $table->string('dest_lat', 100);
             $table->string('dest_long', 100);
-            $table->integer('total_distance', false, true)->length(10);
+            $table->integer('distance', false, true)->length(10);
             $table->string('status', 20);
             $table->integer('created_at')->default(Carbon::now()->timestamp);
             $table->integer('updated_at')->default(Carbon::now()->timestamp);

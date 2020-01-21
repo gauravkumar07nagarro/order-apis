@@ -18,7 +18,7 @@ use Dingo\Api\Routing\Helpers as ApiHelper;
 
 /**
  * @SWG\Swagger(
- *   basePath="/api",
+ *   basePath="/",
  *   @SWG\Info(
  *     title="Order APIs",
  *     version="1.0.0"
@@ -61,7 +61,7 @@ class ApiController extends Controller
      *      ),
      *      @SWG\Response(
      *          response=200,
-     *          description="[{'id': 10,'total_distance': 170201,'status': 'UNASSIGNED'},{'id': 11,'total_distance': 170211,'status':'UNASSIGNED'}]"
+     *          description="[{'id': 10,'distance': 170201,'status': 'UNASSIGNED'},{'id': 11,'distance': 170211,'status':'UNASSIGNED'}]"
      *      ),
      * ),
      */
@@ -100,7 +100,7 @@ class ApiController extends Controller
      *      ),
      *      @SWG\Response(
      *          response=200,
-     *          description="{'total_distance': 170201,'status': 'UNASSIGNED','id': 8}"
+     *          description="{'distance': 170201,'status': 'UNASSIGNED','id': 8}"
      *      ),
      *      @SWG\Response(
      *          response=422,
