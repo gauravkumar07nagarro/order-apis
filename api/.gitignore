@@ -15,3 +15,8 @@ yarn-error.log
 /tests/Unit/ExampleTest.php
 /tests/Feature/ExampleTest.php
 /resources
+.editorconfig
+package.json
+webpack.min.js
+/public
+/app/Http/Middleware/OrderApiAuthentication.php
