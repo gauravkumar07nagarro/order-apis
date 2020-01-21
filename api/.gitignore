@@ -17,6 +17,11 @@ yarn-error.log
 /resources
 .editorconfig
 package.json
-webpack.min.js
+webpack.mix.js
+.styleci.yml
 /public
 /app/Http/Middleware/OrderApiAuthentication.php
+/storage/api-docs
+/storage/app
+/storage/framework
+/storage/logs
