@@ -29,7 +29,7 @@ class PatchOrderRequest extends FormRequest
     {
         return [
            'status' => 'required|string|in:TAKEN',
-           'id'     => 'required|integer'
+           'id'     => 'required|integer|gt:0'
         ];
     }
 
