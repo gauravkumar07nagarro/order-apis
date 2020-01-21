@@ -24,5 +24,4 @@ webpack.mix.js
 /public/web.config
 /app/Http/Middleware/OrderApiAuthentication.php
 /storage/api-docs
-/storage/logs
 /storage/framework/views
