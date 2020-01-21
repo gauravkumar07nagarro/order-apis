@@ -22,7 +22,7 @@ $ git clone https://github.com/gauravkumar07nagarro/order-apis.git
 ### Environment variables
 
 API_SUBTYPE=myapp <br/>
-API_PREFIX=api <br/>
+API_PREFIX=/ <br/>
 API_VERSION=v1 <br/>
 API_STRICT=false <br/>
 API_CONDITIONAL_REQUEST=false <br/>
@@ -54,22 +54,22 @@ Above file is used to setup your project in Docker container. It will perform be
 - Run all test cases.
 
 ### Swagger Documentation
-    [http://localhost:8080/api/documentation] (API Demo)
+    [http://localhost:8080/documentation] (API Demo)
 List of APIs will be displayed
 
 ### API Documentation & Examples
 
-Base Url http://localhost:8080/api
+Base Url http://localhost:8080/
 
 | METHOD | Content-type |API Endpoint | Example |
 | ------ | ------ | ------ | ------- |
-| GET | application/json | /orders?page={page}&limit={limit} | http://localhost:8080/api/orders?page=1&limit=10 |
-| POST | application/json | /orders | http://localhost:8080/api/orders |
-| PATCH | application/json | /orders/{id} |  http://localhost:8080/api/orders/10 |
+| GET | application/json | /orders?page={page}&limit={limit} | http://localhost:8080/orders?page=1&limit=10 |
+| POST | application/json | /orders | http://localhost:8080/orders |
+| PATCH | application/json | /orders/{id} |  http://localhost:8080/orders/10 |
 
 - ## API To Create A New Order
   Method : POST <br/>
-  Url : http://localhost:8080/api/orders <br/>
+  Url : http://localhost:8080/orders <br/>
   Body : 
     ```sh 
     { 
@@ -91,7 +91,7 @@ Base Url http://localhost:8080/api
 
 - ## API To Update Status Of An Order
   Method : PATCH <br/>
-  Url : http://localhost:8080/api/orders/1 <br/>
+  Url : http://localhost:8080/orders/1 <br/>
   Body : 
     ```sh 
     { 
@@ -110,7 +110,7 @@ Base Url http://localhost:8080/api
 
 - ## API To List The Orders
   Method : GET <br/>
-  Url : http://localhost:8080/api/orders?page=1&limit=10 <br/>
+  Url : http://localhost:8080/orders?page=1&limit=10 <br/>
   Response : 
     ```sh 
       [
