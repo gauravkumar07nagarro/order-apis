@@ -17,7 +17,6 @@ yarn-error.log
 /resources/js
 /resources/sass
 /app/Http/Middleware/OrderApiAuthentication.php
-/storage/api-docs
 package.json
 webpack.mix.js
 .styleci.yml
