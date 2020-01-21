@@ -32,12 +32,15 @@ trait Helper {
 
             $response = $curl->getRequest($url, $params);
 
+            if ( !empty($response) && isset($response['status']) && $response['status'] == "REQUEST_DENIED" ) {
+                throw new \Exception(trans('order.google_api_exception'));
+            }
+
             if (!empty($response) && isset($response['rows'][0]['elements'][0]['distance']['value']) && $response['rows'][0]['elements'][0]['distance']['value'] > 0 ) {
                 $totalDistance = $response['rows'][0]['elements'][0]['distance']['value'];
             } elseif (!empty($response) && !isset($response['rows'][0]['elements'][0]['distance']['value'])){
                 throw new \Exception(trans('order.google_api_distance_exception'));
             } elseif (!empty($response) && isset($response['rows'][0]['elements'][0]['distance']['value']) && $response['rows'][0]['elements'][0]['distance']['value'] == 0 ){
-
                 throw new \Exception(trans('order.same_origin_and_destination'));
             }
 

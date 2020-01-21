@@ -51,7 +51,7 @@ class OrderRepository
             if ($result) {
                 $affectedRows = Order::where([
                     'id' => $id
-                ])->update([
+                ])->lockForUpdate()->update([
                     'status' => Order::TAKEN
                 ]);
                 DB::commit();
