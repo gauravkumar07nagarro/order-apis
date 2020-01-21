@@ -57,7 +57,7 @@ class OrderApiTest extends TestCase
         }
 
         $response->assertStatus(Response::HTTP_OK)->assertJsonStructure([
-            'total_distance',
+            'distance',
             'status',
             'id'
         ]);
@@ -194,7 +194,7 @@ class OrderApiTest extends TestCase
         $orderId = $jsonResponse['id'];
 
         $response->assertStatus(Response::HTTP_OK)->assertJsonStructure([
-            'total_distance',
+            'distance',
             'status',
             'id'
         ]);
