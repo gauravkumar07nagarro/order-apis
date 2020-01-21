@@ -19,8 +19,11 @@ yarn-error.log
 package.json
 webpack.mix.js
 .styleci.yml
-/public
+/public/favicon.ico
+/public/robots.txt
+/public/web.config
 /app/Http/Middleware/OrderApiAuthentication.php
 /storage/api-docs
 /storage/app
 /storage/logs
+/storage/framework/views
