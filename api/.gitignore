@@ -15,13 +15,6 @@ yarn-error.log
 /tests/Unit/ExampleTest.php
 /tests/Feature/ExampleTest.php
 /resources
-.editorconfig
-package.json
-webpack.mix.js
-.styleci.yml
-/public/favicon.ico
-/public/robots.txt
-/public/web.config
 /app/Http/Middleware/OrderApiAuthentication.php
 /storage/api-docs
 /storage/framework/views
