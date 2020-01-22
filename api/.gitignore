@@ -20,3 +20,4 @@ yarn-error.log
 package.json
 webpack.mix.js
 .styleci.yml
+.editorconfig
